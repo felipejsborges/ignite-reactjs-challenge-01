@@ -1,0 +1,27 @@
+.unchecked {
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 50%;
+	border: 1px solid var(--blue);
+	background: transparent;
+	cursor: pointer;
+}
+
+.unchecked:hover {
+	border-color: var(--blue-dark);
+}
+
+.checked {
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 50%;
+	border: 1px solid var(--purple-dark);
+	background: var(--purple-dark);
+	opacity: 0.9;
+	cursor: pointer;
+}
+
+.checked:hover {
+	border-color: var(--purple);
+	background: var(--purple);
+}

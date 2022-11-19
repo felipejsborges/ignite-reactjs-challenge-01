@@ -1,0 +1,83 @@
+.home {
+	background: var(--gray-600);
+}
+
+.home>header {
+	background: var(--gray-700);
+	height: 12.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.home>main {
+	padding: 0 30% 4rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.home>main .searchContainer {
+	display: flex;
+	margin-top: -1.6875rem;
+}
+
+.home>main .searchContainer button {
+	margin-left: 0.5rem;
+}
+
+.home>main .taskList>header {
+	display: flex;
+	justify-content: space-between;
+	margin: 4rem 0 1.5rem;
+}
+
+.home>main .taskList>main .emptyList {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 4rem 1.5rem;
+	border-top: 1px solid var(--gray-400);
+	border-radius: 0.5rem;
+	color: var(--gray-300);
+}
+
+.home>main .taskList>main .emptyList svg {
+	width: 3.5rem;
+	height: 3.5rem;
+	margin-bottom: 1rem;
+}
+
+.home>main .taskList>main .emptyList span {
+	color: var(--gray-300);
+}
+
+@media (max-width: 1000px) {
+	.home>main .taskList>header {
+		flex-direction: column;
+		align-items: center;
+	}
+	.home>main .taskList>header div+div {
+		margin-top: 0.5rem;
+	}
+
+	.home>main .searchContainer {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.home>main .searchContainer button {
+		margin-left: 0;
+		margin-top: 1rem;
+	}
+
+	.home>main .taskList>header {
+		display: flex;
+		justify-content: space-between;
+		margin: 1.5rem 0 1.5rem;
+	}
+
+	.home>main {
+		padding: 0 10% 4rem;
+	}
+}
