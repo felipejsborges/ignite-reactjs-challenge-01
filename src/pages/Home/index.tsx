@@ -39,6 +39,17 @@ export function Home() {
 		setTasks([...tasks])
 	}
 
+	function getTasksQuantity() {
+		let completed = 0
+		let uncompleted = 0
+
+		for (const task of tasks) {
+			task.isCompleted ? completed++ : uncompleted++
+		}
+
+		return { completed, uncompleted }
+	}
+
 	return (
 		<div className={styles.home}>
 			<header>
@@ -51,8 +62,8 @@ export function Home() {
 				</div>
 				<div className={styles.taskList}>
 					<header>
-						<HeaderItem text='Tarefas criadas' quantity={0} />
-						<HeaderItem text='Concluídas' quantity={0} />
+						<HeaderItem text='Tarefas criadas' quantity={getTasksQuantity().uncompleted} />
+						<HeaderItem text='Concluídas' quantity={getTasksQuantity().completed} />
 					</header>
 					<main>
 						{!tasks.length ? (
